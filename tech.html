@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CoinDesk Tech</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { brand: { yellow: '#ffb800', dark: '#111111' } },
+            fontFamily: { sans: ['Public Sans', 'Inter', 'system-ui', '-apple-system', 'Segoe UI', 'sans-serif'] },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script defer src="js/main.js"></script>
+  </head>
+  <body class="bg-white text-gray-900">
+    <div class="ticker-bar">
+      <div class="overflow-hidden whitespace-nowrap">
+        <div id="tickerTrack" class="ticker-track flex gap-8 px-4 py-2">
+          <span class="ticker-pill">DevNet: Fusaka upgrade rehearsal live</span>
+          <span class="ticker-pill">Restaking TVL crosses $4.8B</span>
+        </div>
+      </div>
+    </div>
+
+    <header class="bg-white border-b border-gray-200">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="flex flex-col gap-4 py-4 lg:flex-row lg:items-center lg:justify-between">
+          <div class="flex items-center gap-10">
+            <a href="index.html" class="flex items-center gap-3">
+              <div class="h-10 w-10 rounded-lg bg-brand-yellow"></div>
+              <span class="text-2xl font-bold logo-type">CoinDesk</span>
+            </a>
+            <nav class="hidden md:flex items-center gap-6 text-sm font-semibold uppercase tracking-wide">
+              <a class="nav-link" href="index.html">News</a>
+              <a class="nav-link" href="markets.html">Markets</a>
+              <a class="nav-link" href="policy.html">Policy</a>
+              <a class="nav-link active" href="tech.html">Tech</a>
+              <a class="nav-link" href="business.html">Business</a>
+              <a class="nav-link" href="learn.html">Learn</a>
+            </nav>
+          </div>
+          <div class="flex items-center gap-4">
+            <button class="px-4 py-2 text-sm font-semibold uppercase border border-gray-900 rounded-full">Subscribe</button>
+            <button class="px-4 py-2 text-sm font-semibold uppercase bg-brand-yellow text-gray-900 rounded-full">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-10 space-y-10" data-section="tech">
+      <section class="grid gap-8 lg:grid-cols-[1.5fr_1fr]">
+        <article class="hero-card">
+          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=60" alt="servers" />
+          <div class="card-body space-y-3">
+            <span class="badge">Builders</span>
+            <h1 class="text-3xl font-bold">Ethereum Developers Prep for Fusaka, Second Upgrade of 2025</h1>
+            <p class="text-sm text-white/80">Multiple clients coordinate for danksharding pre-work and proto-dankshard tuning.</p>
+          </div>
+        </article>
+        <div class="space-y-4">
+          <article class="article-card">
+            <div class="card-body space-y-3">
+              <span class="tiny-label">Research</span>
+              <h3>What mNAV Really Tells You About Blockchain Treasury Companies</h3>
+              <p class="text-sm text-gray-600">Open-source dashboard merges on-chain and GAAP data.</p>
+            </div>
+          </article>
+          <article class="article-card">
+            <div class="card-body space-y-3">
+              <span class="tiny-label">Security</span>
+              <h3>Privacy Is the Immune System of Freedom</h3>
+              <p class="text-sm text-gray-600">Zero-knowledge startups team up with LATAM advocacy groups.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="space-y-6">
+        <div class="section-heading">
+          <span>Dev Briefs</span>
+          <a class="text-xs font-semibold text-gray-500" href="#">View changelog</a>
+        </div>
+        <div class="grid gap-6 md:grid-cols-3" data-injection="main_featured">
+          <article class="article-card">
+            <div class="card-body space-y-3">
+              <span class="tiny-label">AI</span>
+              <h3>Agentic Trading Bots Pass $2B in Volume</h3>
+              <p class="text-sm text-gray-600">Exchanges demand watermarking and guardrails.</p>
+            </div>
+          </article>
+          <article class="article-card">
+            <div class="card-body space-y-3">
+              <span class="tiny-label">Infrastructure</span>
+              <h3>Modular Rollups Get First Production zkPCM Launch</h3>
+              <p class="text-sm text-gray-600">Sequencer slots auctioned via shared security.</p>
+            </div>
+          </article>
+          <article class="article-card">
+            <div class="card-body space-y-3">
+              <span class="tiny-label">Tooling</span>
+              <h3>Open-Source Observability Pack for Validators</h3>
+              <p class="text-sm text-gray-600">Grafana, Loki, and trace tooling ship as one-click stack.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="grid gap-10 lg:grid-cols-[2fr_1fr]">
+        <div class="space-y-6">
+          <div class="section-heading">
+            <span>Research & Guides</span>
+            <a class="text-xs font-semibold text-gray-500" href="#">Explore more</a>
+          </div>
+          <div class="grid gap-6 md:grid-cols-2">
+            <article class="article-card">
+              <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=700&q=60" alt="chip" />
+              <div class="card-body space-y-3">
+                <p class="tiny-label">Hardware</p>
+                <h3>How ASIC Vendors are Reworking Cooling for the Halving</h3>
+                <p class="text-sm text-gray-600">Immersion deployments turn from novelty to norm.</p>
+              </div>
+            </article>
+            <article class="article-card">
+              <img src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=700&q=60" alt="code" />
+              <div class="card-body space-y-3">
+                <p class="tiny-label">Developer Tools</p>
+                <h3>The Open-Source Security Checklist for Smart Contracts</h3>
+                <p class="text-sm text-gray-600">Linting, fuzzing, and verification flows teams should implement.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <aside class="sidebar-widgets">
+          <div class="sidebar-card">
+            <div class="card-body space-y-3">
+              <p class="tiny-label">Newsletter</p>
+              <h3>Code to Crypto</h3>
+              <p class="text-sm text-gray-600">Weekly digest for devs, shipped Fridays.</p>
+              <form class="space-y-3">
+                <input class="w-full rounded-full border border-gray-300 px-4 py-2 text-sm" placeholder="Email address" />
+                <button class="w-full rounded-full bg-brand-yellow text-gray-900 font-semibold py-2">Subscribe</button>
+              </form>
+            </div>
+          </div>
+          <div class="sidebar-card">
+            <div class="card-body space-y-3">
+              <p class="tiny-label">Events</p>
+              <h3>Builders Stage @ Consensus</h3>
+              <p class="text-sm text-gray-600">Live audits, hackathons, and workshops.</p>
+              <a class="text-sm font-semibold" href="#">See agenda →</a>
+            </div>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="bg-gray-50 border-t border-gray-200">
+      <div class="max-w-6xl mx-auto px-4 py-10 text-sm text-gray-600">
+        CoinDesk Tech • Engineering the decentralized future.
+      </div>
+    </footer>
+  </body>
+</html>

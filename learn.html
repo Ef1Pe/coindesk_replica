@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CoinDesk Learn</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { brand: { yellow: '#ffb800', dark: '#111111' } },
+            fontFamily: { sans: ['Public Sans', 'Inter', 'system-ui', '-apple-system', 'Segoe UI', 'sans-serif'] },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script defer src="js/main.js"></script>
+  </head>
+  <body class="bg-white text-gray-900">
+    <div class="ticker-bar">
+      <div class="overflow-hidden whitespace-nowrap">
+        <div id="tickerTrack" class="ticker-track flex gap-8 px-4 py-2">
+          <span class="ticker-pill">New to Crypto? Start Here.</span>
+          <span class="ticker-pill">Learn: Stablecoins 101 • Staking Basics • Security</span>
+        </div>
+      </div>
+    </div>
+
+    <header class="bg-white border-b border-gray-200">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="flex flex-col gap-4 py-4 lg:flex-row lg:items-center lg:justify-between">
+          <div class="flex items-center gap-10">
+            <a href="index.html" class="flex items-center gap-3">
+              <div class="h-10 w-10 rounded-lg bg-brand-yellow"></div>
+              <span class="text-2xl font-bold logo-type">CoinDesk</span>
+            </a>
+            <nav class="hidden md:flex items-center gap-6 text-sm font-semibold uppercase tracking-wide">
+              <a class="nav-link" href="index.html">News</a>
+              <a class="nav-link" href="markets.html">Markets</a>
+              <a class="nav-link" href="policy.html">Policy</a>
+              <a class="nav-link" href="tech.html">Tech</a>
+              <a class="nav-link" href="business.html">Business</a>
+              <a class="nav-link active" href="learn.html">Learn</a>
+            </nav>
+          </div>
+          <div class="flex items-center gap-4">
+            <button class="px-4 py-2 text-sm font-semibold uppercase border border-gray-900 rounded-full">Subscribe</button>
+            <button class="px-4 py-2 text-sm font-semibold uppercase bg-brand-yellow text-gray-900 rounded-full">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-4 py-10 space-y-10" data-section="learn">
+      <section class="text-center space-y-4">
+        <p class="tiny-label">Learning Hub</p>
+        <h1 class="text-4xl font-bold">Understand Crypto with Guided Paths</h1>
+        <p class="text-lg text-gray-600">
+          Tutorials, explainers, and checklists designed by CoinDesk editors to help you understand crypto safely.
+        </p>
+        <div class="flex flex-wrap items-center justify-center gap-3 text-sm font-semibold">
+          <span class="badge">Starter</span>
+          <span class="badge">Investor</span>
+          <span class="badge">Builder</span>
+        </div>
+      </section>
+
+      <section class="grid gap-6 md:grid-cols-2">
+        <article class="article-card">
+          <div class="card-body space-y-3">
+            <p class="tiny-label">Beginner</p>
+            <h3>Crypto Basics Crash Course</h3>
+            <p class="text-sm text-gray-600">Wallets, custody, and exchanges explained in 30 minutes.</p>
+          </div>
+        </article>
+        <article class="article-card">
+          <div class="card-body space-y-3">
+            <p class="tiny-label">Security</p>
+            <h3>How to Safeguard Your Private Keys</h3>
+            <p class="text-sm text-gray-600">Set up hardware wallets, seed phrases, and backups.</p>
+          </div>
+        </article>
+        <article class="article-card">
+          <div class="card-body space-y-3">
+            <p class="tiny-label">DeFi</p>
+            <h3>Understanding Stablecoins and Yield</h3>
+            <p class="text-sm text-gray-600">Learn risks and best practices for navigating decentralized lending.</p>
+          </div>
+        </article>
+        <article class="article-card">
+          <div class="card-body space-y-3">
+            <p class="tiny-label">Tax</p>
+            <h3>Filing Crypto Taxes Across Jurisdictions</h3>
+            <p class="text-sm text-gray-600">Walkthrough for the most common trading scenarios.</p>
+          </div>
+        </article>
+      </section>
+
+      <section class="space-y-6">
+        <div class="section-heading">
+          <span>Featured Guides</span>
+          <a class="text-xs font-semibold text-gray-500" href="#">See all</a>
+        </div>
+        <div class="grid gap-6 md:grid-cols-3" data-injection="main_featured">
+          <article class="article-card">
+            <div class="card-body space-y-3">
+              <p class="tiny-label">Guided Path</p>
+              <h3>From Zero to First Bitcoin Purchase</h3>
+              <p class="text-sm text-gray-600">Account setup, compliance, and first self-custody steps.</p>
+            </div>
+          </article>
+          <article class="article-card">
+            <div class="card-body space-y-3">
+              <p class="tiny-label">Tutorial</p>
+              <h3>How to Read On-Chain Data</h3>
+              <p class="text-sm text-gray-600">Understand active addresses, velocity, and dormancy.</p>
+            </div>
+          </article>
+          <article class="article-card">
+            <div class="card-body space-y-3">
+              <p class="tiny-label">Explainer</p>
+              <h3>What Is Restaking?</h3>
+              <p class="text-sm text-gray-600">The mechanics behind Ethereum's newest narrative.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="grid gap-8 md:grid-cols-2">
+        <div class="promo-banner space-y-4 text-left">
+          <p class="tiny-label text-white">Free Email Course</p>
+          <h3 class="text-2xl font-bold">7 Days to Crypto Literacy</h3>
+          <p class="text-sm text-white/80">Daily lessons with worksheets and quizzes.</p>
+          <form class="space-y-3">
+            <input class="w-full rounded-full border border-transparent px-4 py-2 text-sm text-gray-900" placeholder="Email" />
+            <button class="w-full rounded-full bg-white text-gray-900 font-semibold py-2">Start learning</button>
+          </form>
+        </div>
+        <div class="sidebar-card">
+          <div class="card-body space-y-3">
+            <p class="tiny-label">Community</p>
+            <h3>Join the CoinDesk Learn Discord</h3>
+            <p class="text-sm text-gray-600">Weekly office hours with reporters and analysts.</p>
+            <a class="text-sm font-semibold" href="#">Join server →</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-gray-50 border-t border-gray-200">
+      <div class="max-w-5xl mx-auto px-4 py-10 text-sm text-gray-600">
+        CoinDesk Learn • Education resources for every level.
+      </div>
+    </footer>
+  </body>
+</html>
