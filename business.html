@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CoinDesk Business</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { brand: { yellow: '#ffb800', dark: '#111111' } },
+            fontFamily: { sans: ['Public Sans', 'Inter', 'system-ui', '-apple-system', 'Segoe UI', 'sans-serif'] },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script defer src="js/main.js"></script>
+  </head>
+  <body class="bg-white text-gray-900">
+    <div class="ticker-bar">
+      <div class="overflow-hidden whitespace-nowrap">
+        <div id="tickerTrack" class="ticker-track flex gap-8 px-4 py-2">
+          <span class="ticker-pill">Corporate Treasuries Add BTC</span>
+          <span class="ticker-pill">Venture Funding $1.4B YTD</span>
+        </div>
+      </div>
+    </div>
+
+    <header class="bg-white border-b border-gray-200">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="flex flex-col gap-4 py-4 lg:flex-row lg:items-center lg:justify-between">
+          <div class="flex items-center gap-10">
+            <a href="index.html" class="flex items-center gap-3">
+              <div class="h-10 w-10 rounded-lg bg-brand-yellow"></div>
+              <span class="text-2xl font-bold logo-type">CoinDesk</span>
+            </a>
+            <nav class="hidden md:flex items-center gap-6 text-sm font-semibold uppercase tracking-wide">
+              <a class="nav-link" href="index.html">News</a>
+              <a class="nav-link" href="markets.html">Markets</a>
+              <a class="nav-link" href="policy.html">Policy</a>
+              <a class="nav-link" href="tech.html">Tech</a>
+              <a class="nav-link active" href="business.html">Business</a>
+              <a class="nav-link" href="learn.html">Learn</a>
+            </nav>
+          </div>
+          <div class="flex items-center gap-4">
+            <button class="px-4 py-2 text-sm font-semibold uppercase border border-gray-900 rounded-full">Subscribe</button>
+            <button class="px-4 py-2 text-sm font-semibold uppercase bg-brand-yellow text-gray-900 rounded-full">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-10 space-y-10" data-section="business">
+      <section class="grid gap-8 lg:grid-cols-[1.5fr_1fr]">
+        <div class="space-y-4">
+          <p class="tiny-label">Corporate Coverage</p>
+          <h1 class="text-4xl font-bold">Treasury, Venture, and Institutional Strategy</h1>
+          <p class="text-lg text-gray-600">
+            We follow public filings, C-suite commentary, and institutional flows across the crypto economy.
+          </p>
+          <div class="article-card">
+            <div class="card-body space-y-3">
+              <span class="badge">Cover Story</span>
+              <h3>The $1.7B Bitcoin Bet on Rally Above $100K</h3>
+              <p class="text-sm text-gray-600">Why corporates hedge a measured rally rather than a record-breaking surge.</p>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-card">
+          <div class="card-body space-y-3">
+            <p class="tiny-label">Data</p>
+            <h3>CoinDesk Indices Launches Digital Asset Yield Benchmarks</h3>
+            <p class="text-sm text-gray-600">New series tracks treasury-style laddering approaches for token treasuries.</p>
+            <button class="px-4 py-2 rounded-full bg-gray-900 text-white text-sm font-semibold">Explore indices</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="grid gap-6 md:grid-cols-3" data-injection="main_featured">
+        <article class="article-card">
+          <div class="card-body space-y-3">
+            <span class="tiny-label">Earnings</span>
+            <h3>Riot Platforms Beats, Credits Energy Arbitrage</h3>
+            <p class="text-sm text-gray-600">Flex power contracts offset hash-rate drawdowns.</p>
+          </div>
+        </article>
+        <article class="article-card">
+          <div class="card-body space-y-3">
+            <span class="tiny-label">M&A</span>
+            <h3>Custody Powerhouses Eye Strategic Tie-Ups</h3>
+            <p class="text-sm text-gray-600">Anchorage and BitGo rumored to explore asset swaps.</p>
+          </div>
+        </article>
+        <article class="article-card">
+          <div class="card-body space-y-3">
+            <span class="tiny-label">Startups</span>
+            <h3>Web3 Payroll Platform Raises $120M Series B</h3>
+            <p class="text-sm text-gray-600">Automated tax withholding across 42 jurisdictions.</p>
+          </div>
+        </article>
+      </section>
+
+      <section class="grid gap-10 lg:grid-cols-[2fr_1fr]">
+        <div class="space-y-6">
+          <div class="section-heading">
+            <span>Deal Sheet</span>
+            <a class="text-xs font-semibold text-gray-500" href="#">Submit deal</a>
+          </div>
+          <div class="grid gap-6 md:grid-cols-2">
+            <article class="article-card">
+              <div class="card-body space-y-3">
+                <p class="tiny-label">Venture</p>
+                <h3>Digital Asset Bank Raised $300M to Fund APAC Expansion</h3>
+                <p class="text-sm text-gray-600">Temasek leads round with sovereign wealth participation.</p>
+              </div>
+            </article>
+            <article class="article-card">
+              <div class="card-body space-y-3">
+                <p class="tiny-label">Treasury</p>
+                <h3>Miner Marathon Adds 7,200 BTC to Strategic Stack</h3>
+                <p class="text-sm text-gray-600">Lockup aligns with ETF redemption schedules.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <aside class="sidebar-widgets">
+          <div class="sidebar-card">
+            <div class="card-body space-y-3">
+              <p class="tiny-label">Newsletter</p>
+              <h3>CoinDesk Deals</h3>
+              <p class="text-sm text-gray-600">Every Monday: funding, mandates, and board moves.</p>
+              <form class="space-y-3">
+                <input class="w-full rounded-full border border-gray-300 px-4 py-2 text-sm" placeholder="Email" />
+                <button class="w-full rounded-full bg-brand-yellow text-gray-900 font-semibold py-2">Join list</button>
+              </form>
+            </div>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="bg-gray-50 border-t border-gray-200">
+      <div class="max-w-6xl mx-auto px-4 py-10 text-sm text-gray-600">
+        CoinDesk Business • Corporate coverage for the crypto economy.
+      </div>
+    </footer>
+  </body>
+</html>

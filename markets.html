@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CoinDesk Markets</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: { yellow: '#ffb800', dark: '#111111' },
+            },
+            fontFamily: {
+              sans: ['Public Sans', 'Inter', 'system-ui', '-apple-system', 'Segoe UI', 'sans-serif'],
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script defer src="js/main.js"></script>
+  </head>
+  <body class="bg-white text-gray-900">
+    <div class="ticker-bar">
+      <div class="overflow-hidden whitespace-nowrap">
+        <div id="tickerTrack" class="ticker-track flex gap-8 px-4 py-2">
+          <span class="ticker-pill">BTC $70,783 ▲ 2.1%</span>
+          <span class="ticker-pill">ETH $3,420 ▲ 1.3%</span>
+          <span class="ticker-pill">SOL $168 ▼ 0.4%</span>
+          <span class="ticker-pill">XRP $0.62 ▲ 5.7%</span>
+          <span class="ticker-pill">DOGE $0.13 ▲ 0.9%</span>
+        </div>
+      </div>
+    </div>
+
+    <header class="bg-white border-b border-gray-200">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="flex flex-col gap-4 py-4 lg:flex-row lg:items-center lg:justify-between">
+          <div class="flex items-center gap-10">
+            <a href="index.html" class="flex items-center gap-3">
+              <div class="h-10 w-10 rounded-lg bg-brand-yellow"></div>
+              <span class="text-2xl font-bold logo-type">CoinDesk</span>
+            </a>
+            <nav class="hidden md:flex items-center gap-6 text-sm font-semibold uppercase tracking-wide">
+              <a class="nav-link" href="index.html">News</a>
+              <a class="nav-link active" href="markets.html">Markets</a>
+              <a class="nav-link" href="policy.html">Policy</a>
+              <a class="nav-link" href="tech.html">Tech</a>
+              <a class="nav-link" href="business.html">Business</a>
+              <a class="nav-link" href="learn.html">Learn</a>
+            </nav>
+          </div>
+          <div class="flex items-center gap-4">
+            <button class="px-4 py-2 text-sm font-semibold uppercase border border-gray-900 rounded-full">Subscribe</button>
+            <button class="px-4 py-2 text-sm font-semibold uppercase bg-brand-yellow text-gray-900 rounded-full">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-10 space-y-10" data-section="markets">
+      <section class="grid gap-8 lg:grid-cols-[2fr_1fr]">
+        <div class="space-y-6">
+          <p class="tiny-label">Markets Center</p>
+          <h1 class="text-4xl font-bold leading-tight">Charts, Flows, Signals</h1>
+          <div class="grid gap-4 md:grid-cols-3">
+            <div class="article-card">
+              <div class="card-body space-y-2">
+                <p class="tiny-label">BTC ETF Inflow</p>
+                <h3 class="text-2xl font-semibold">$404M</h3>
+                <p class="text-sm text-gray-600">3-day rolling</p>
+              </div>
+            </div>
+            <div class="article-card">
+              <div class="card-body space-y-2">
+                <p class="tiny-label">Crypto Total Cap</p>
+                <h3 class="text-2xl font-semibold">$2.86T</h3>
+                <p class="text-sm text-gray-600">+18% month over month</p>
+              </div>
+            </div>
+            <div class="article-card">
+              <div class="card-body space-y-2">
+                <p class="tiny-label">Fear & Greed</p>
+                <h3 class="text-2xl font-semibold">74 / Greed</h3>
+                <p class="text-sm text-gray-600">up 6 points on the week</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="promo-banner space-y-3">
+          <p class="tiny-label text-white">Premium Research</p>
+          <h2 class="text-2xl font-bold">Daily Macro Crypto Briefing</h2>
+          <p class="text-sm text-white/80">Actionable trading ranges with FX and rates context.</p>
+          <button class="px-4 py-2 bg-white text-gray-900 rounded-full text-sm font-semibold">Start free trial</button>
+        </div>
+      </section>
+
+      <section class="space-y-6">
+        <div class="section-heading">
+          <span>Spot Markets</span>
+          <a class="text-xs font-semibold text-gray-500" href="#">Download CSV</a>
+        </div>
+        <div class="overflow-x-auto rounded-2xl border border-gray-200">
+          <table class="w-full text-sm">
+            <thead class="bg-gray-50 text-gray-500 uppercase text-xs">
+              <tr>
+                <th class="px-4 py-3 text-left">Asset</th>
+                <th class="px-4 py-3 text-right">Price</th>
+                <th class="px-4 py-3 text-right">24h</th>
+                <th class="px-4 py-3 text-right">7d</th>
+                <th class="px-4 py-3 text-right">Market Cap</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-t">
+                <td class="px-4 py-3 font-semibold">Bitcoin</td>
+                <td class="px-4 py-3 text-right">$70,783</td>
+                <td class="px-4 py-3 text-right text-green-600">+2.1%</td>
+                <td class="px-4 py-3 text-right text-green-600">+6.4%</td>
+                <td class="px-4 py-3 text-right">$1.39T</td>
+              </tr>
+              <tr class="border-t">
+                <td class="px-4 py-3 font-semibold">Ethereum</td>
+                <td class="px-4 py-3 text-right">$3,420</td>
+                <td class="px-4 py-3 text-right text-green-600">+1.3%</td>
+                <td class="px-4 py-3 text-right text-green-600">+4.7%</td>
+                <td class="px-4 py-3 text-right">$420B</td>
+              </tr>
+              <tr class="border-t">
+                <td class="px-4 py-3 font-semibold">Solana</td>
+                <td class="px-4 py-3 text-right">$168</td>
+                <td class="px-4 py-3 text-right text-red-500">-0.4%</td>
+                <td class="px-4 py-3 text-right text-green-600">+2.8%</td>
+                <td class="px-4 py-3 text-right">$74B</td>
+              </tr>
+              <tr class="border-t">
+                <td class="px-4 py-3 font-semibold">XRP</td>
+                <td class="px-4 py-3 text-right">$0.62</td>
+                <td class="px-4 py-3 text-right text-green-600">+5.7%</td>
+                <td class="px-4 py-3 text-right text-green-600">+9.1%</td>
+                <td class="px-4 py-3 text-right">$33B</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="grid gap-8 lg:grid-cols-3" data-injection="main_featured">
+        <article class="article-card">
+          <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=60" alt="trading floor" />
+          <div class="card-body space-y-3">
+            <span class="tiny-label">Derivatives</span>
+            <h3>Options Skew Shows Traders Hedging Halving Downside</h3>
+            <p class="text-sm text-gray-600">Put/call ratios jump above 1.2 for first time since February.</p>
+          </div>
+        </article>
+        <article class="article-card">
+          <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=60" alt="gold" />
+          <div class="card-body space-y-3">
+            <span class="tiny-label">Commodities</span>
+            <h3>Why Gold Is Winning Over Bitcoin in 2025 Liquidity</h3>
+            <p class="text-sm text-gray-600">Treasurers balance volatility against yield-starved bond markets.</p>
+          </div>
+        </article>
+        <article class="article-card">
+          <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=800&q=60" alt="charts" />
+          <div class="card-body space-y-3">
+            <span class="tiny-label">FX</span>
+            <h3>Dollar Strength Returns as Rate Cuts Get Pushed Back</h3>
+            <p class="text-sm text-gray-600">Crypto correlations with DXY hit a six-month high.</p>
+          </div>
+        </article>
+      </section>
+
+      <section class="grid gap-10 lg:grid-cols-[2fr_1fr]">
+        <div class="space-y-6">
+          <div class="section-heading">
+            <span>Liquidity Pulse</span>
+            <a class="text-xs font-semibold text-gray-500" href="#">See methodology</a>
+          </div>
+          <div class="article-card">
+            <div class="card-body space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="font-semibold">Aggregate CEX Volume</span>
+                <span class="text-sm text-green-600">$98B • +14%</span>
+              </div>
+              <div class="w-full rounded-full bg-gray-100 h-3">
+                <div class="h-3 rounded-full bg-brand-yellow" style="width: 68%"></div>
+              </div>
+              <p class="text-sm text-gray-600">
+                Binance, Coinbase, OKX drive new highs as ETF arbitrage widens spreads.
+              </p>
+            </div>
+          </div>
+          <div class="grid gap-4 md:grid-cols-2">
+            <div class="article-card">
+              <div class="card-body space-y-3">
+                <span class="tiny-label">DeFi TVL</span>
+                <h3>$108B</h3>
+                <p class="text-sm text-gray-600">Lido and restaking protocols lead inflows.</p>
+              </div>
+            </div>
+            <div class="article-card">
+              <div class="card-body space-y-3">
+                <span class="tiny-label">Stablecoin Supply</span>
+                <h3>$146B</h3>
+                <p class="text-sm text-gray-600">USDC regains market share from USDT for second week.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <aside class="sidebar-widgets">
+          <div class="sidebar-card">
+            <div class="card-body space-y-3">
+              <p class="tiny-label">Research Download</p>
+              <h3>Quarterly State of Markets</h3>
+              <p class="text-sm text-gray-600">Flows, macro, and ETF dashboards updated weekly.</p>
+              <button class="px-4 py-2 rounded-full bg-gray-900 text-white text-sm font-semibold">Get report</button>
+            </div>
+          </div>
+          <div class="sidebar-card">
+            <div class="card-body space-y-3">
+              <p class="tiny-label">Tools</p>
+              <h3>Track Digital Asset Indices</h3>
+              <p class="text-sm text-gray-600">Live charts for CoinDesk Market Index family.</p>
+              <a class="text-sm font-semibold text-gray-900" href="#">Launch terminal →</a>
+            </div>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="bg-gray-50 border-t border-gray-200">
+      <div class="max-w-6xl mx-auto px-4 py-10 text-sm text-gray-600">
+        CoinDesk Markets • Data provided for informational purposes only.
+      </div>
+    </footer>
+  </body>
+</html>
